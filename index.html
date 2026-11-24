@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACC Mini Supermarket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">ACC</div>
+    <div>
+        <h1>ACC Mini Supermarket</h1>
+        <p>Everything You Need, All in One Place!</p>
+    </div>
+    <a href="tel:8098159525" class="contact">Call Us</a>
+</header>
+
+<section class="hero">
+    <h2>Welcome to ACC Mini Supermarket</h2>
+    <p>Fresh Groceries | Quality Products | Best Shopping Experience</p>
+    <a href="#shop" class="shop-btn">Shop Now</a>
+</section>
+
+<main id="shop">
+    <section class="products">
+        <h2>Our Grocery Products</h2>
+
+        <input type="text" id="search"
+        placeholder="Search your products..." oninput="displayProducts()">
+
+        <div class="categories">
+            <button onclick="filterProducts('All')">All</button>
+            <button onclick="filterProducts('Rice')">Rice</button>
+            <button onclick="filterProducts('Dal')">Dal</button>
+            <button onclick="filterProducts('Spices')">Spices</button>
+            <button onclick="filterProducts('Milk')">Milk & Chocolate</button>
+            <button onclick="filterProducts('Vegetables')">Vegetables</button>
+            <button onclick="filterProducts('Snacks')">Snacks & Crisps</button>
+        </div>
+
+        <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <section class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <h3>Subtotal: ₹<span id="subtotal">0</span></h3>
+        <h3>Delivery: To be confirmed</h3>
+        <h2>Total: ₹<span id="total">0</span></h2>
+
+        <h3>Customer Details</h3>
+
+        <form id="orderForm">
+            <input type="text" id="customerName"
+            placeholder="Enter your name" required>
+
+            <input type="tel" id="customerPhone"
+            placeholder="Enter phone number"
+            pattern="[0-9+\-\s]{10,15}" required>
+
+            <textarea id="address"
+            placeholder="Enter your delivery address"
+            required></textarea>
+
+            <button type="submit" class="order-btn">
+                Place Order on WhatsApp
+            </button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <h2>ACC Mini Supermarket</h2>
+    <p>Location: Achukkattu, Thiruppathur</p>
+    <p>Contact: 8098159525</p>
+    <p>Email: aafreedhamariyam@gmail.com</p>
+    <p>© 2026 ACC Mini Supermarket</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
